@@ -4,6 +4,7 @@ use strict;
 use LWP::UserAgent;
 use Data::Dumper;
 use MIME::Base64;
+use File::Slurp;
 
 
 my $filename = 'C:\Users\brian\source\repos\perl-projects\dvs-test-app\test-data\Base64Images.txt';
@@ -35,19 +36,13 @@ my $v4_verify_url = 'https://stage.dvs2.idware.net/api/v4/Verify';
 
 #my $verify_path = 'Verify';
 
-my $json = '{ 
-    "frontImageBase64": \"' . encode_base64($front_image) .
-  '\" , "backOrSecondImageBase64":' . encode_base64($back_image) .
-  ' , "faceImageBase64": ' . encode_base64($face_image) .
-  ' , "ssn": \"\"
-   ,"trackString": 
-    {
-      "trackString": null 
-    },
-  "documentType": 1,
-  "overriddenSettings": null,
-  "metadata": null 
-}';
+
+my $input_filename = 'C:\Users\brian\source\repos\perl-projects\dvs-test-app\input.txt';
+
+my $json = read_file($input_filename);
+
+my $output_filename = 'C:\Users\brian\source\repos\perl-projects\dvs-test-app\output.txt';
+open(my $fh, '>', $output_filename) or die "Could not open file '$output_filename' $!";
 
 
 my $req = HTTP::Request->new( 'POST', $v4_verify_url );
@@ -58,9 +53,13 @@ $req->content( $json );
 my $resp = $ua->request($req);
 if ($resp->is_success) {
     my $message = $resp->decoded_content;
-    print "Received reply: $message\n";
+    print $fh Dumper($message);
+      
 }
 else {
     print "HTTP POST error code: ", $resp->code, "\n";
-    print Dumper($resp);
+    print $fh Dumper($resp);
+        
 }
+
+close $fh;
