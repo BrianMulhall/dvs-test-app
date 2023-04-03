@@ -1,0 +1,270 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "status",
+        "totalDuration",
+        "entries"
+    ],
+    "properties": {
+        "status": {
+            "type": "string",
+            "default": "",
+            "title": "The status Schema",
+            "examples": [
+                "Healthy"
+            ]
+        },
+        "totalDuration": {
+            "type": "string",
+            "default": "",
+            "title": "The totalDuration Schema",
+            "examples": [
+                "00:00:00.8185514"
+            ]
+        },
+        "entries": {
+            "type": "object",
+            "default": {},
+            "title": "The entries Schema",
+            "required": [
+                "self",
+                "rabbitmq",
+                "DB-check"
+            ],
+            "properties": {
+                "self": {
+                    "type": "object",
+                    "default": {},
+                    "title": "The self Schema",
+                    "required": [
+                        "data",
+                        "duration",
+                        "status",
+                        "tags"
+                    ],
+                    "properties": {
+                        "data": {
+                            "type": "object",
+                            "default": {},
+                            "title": "The data Schema",
+                            "required": [],
+                            "properties": {},
+                            "examples": [{}]
+                        },
+                        "duration": {
+                            "type": "string",
+                            "default": "",
+                            "title": "The duration Schema",
+                            "examples": [
+                                "00:00:00.0000022"
+                            ]
+                        },
+                        "status": {
+                            "type": "string",
+                            "default": "",
+                            "title": "The status Schema",
+                            "examples": [
+                                "Healthy"
+                            ]
+                        },
+                        "tags": {
+                            "type": "array",
+                            "default": [],
+                            "title": "The tags Schema",
+                            "items": {},
+                            "examples": [
+                                []
+                            ]
+                        }
+                    },
+                    "examples": [{
+                        "data": {},
+                        "duration": "00:00:00.0000022",
+                        "status": "Healthy",
+                        "tags": []
+                    }]
+                },
+                "rabbitmq": {
+                    "type": "object",
+                    "default": {},
+                    "title": "The rabbitmq Schema",
+                    "required": [
+                        "data",
+                        "duration",
+                        "status",
+                        "tags"
+                    ],
+                    "properties": {
+                        "data": {
+                            "type": "object",
+                            "default": {},
+                            "title": "The data Schema",
+                            "required": [],
+                            "properties": {},
+                            "examples": [{}]
+                        },
+                        "duration": {
+                            "type": "string",
+                            "default": "",
+                            "title": "The duration Schema",
+                            "examples": [
+                                "00:00:00.8182562"
+                            ]
+                        },
+                        "status": {
+                            "type": "string",
+                            "default": "",
+                            "title": "The status Schema",
+                            "examples": [
+                                "Healthy"
+                            ]
+                        },
+                        "tags": {
+                            "type": "array",
+                            "default": [],
+                            "title": "The tags Schema",
+                            "items": {
+                                "type": "string",
+                                "default": "",
+                                "title": "A Schema",
+                                "examples": [
+                                    "msgbus"
+                                ]
+                            },
+                            "examples": [
+                                [
+                                    "msgbus"]
+                            ]
+                        }
+                    },
+                    "examples": [{
+                        "data": {},
+                        "duration": "00:00:00.8182562",
+                        "status": "Healthy",
+                        "tags": [
+                            "msgbus"
+                        ]
+                    }]
+                },
+                "DB-check": {
+                    "type": "object",
+                    "default": {},
+                    "title": "The DB-check Schema",
+                    "required": [
+                        "data",
+                        "duration",
+                        "status",
+                        "tags"
+                    ],
+                    "properties": {
+                        "data": {
+                            "type": "object",
+                            "default": {},
+                            "title": "The data Schema",
+                            "required": [],
+                            "properties": {},
+                            "examples": [{}]
+                        },
+                        "duration": {
+                            "type": "string",
+                            "default": "",
+                            "title": "The duration Schema",
+                            "examples": [
+                                "00:00:00.8160581"
+                            ]
+                        },
+                        "status": {
+                            "type": "string",
+                            "default": "",
+                            "title": "The status Schema",
+                            "examples": [
+                                "Healthy"
+                            ]
+                        },
+                        "tags": {
+                            "type": "array",
+                            "default": [],
+                            "title": "The tags Schema",
+                            "items": {
+                                "type": "string",
+                                "default": "",
+                                "title": "A Schema",
+                                "examples": [
+                                    "db"
+                                ]
+                            },
+                            "examples": [
+                                [
+                                    "db"]
+                            ]
+                        }
+                    },
+                    "examples": [{
+                        "data": {},
+                        "duration": "00:00:00.8160581",
+                        "status": "Healthy",
+                        "tags": [
+                            "db"
+                        ]
+                    }]
+                }
+            },
+            "examples": [{
+                "self": {
+                    "data": {},
+                    "duration": "00:00:00.0000022",
+                    "status": "Healthy",
+                    "tags": []
+                },
+                "rabbitmq": {
+                    "data": {},
+                    "duration": "00:00:00.8182562",
+                    "status": "Healthy",
+                    "tags": [
+                        "msgbus"
+                    ]
+                },
+                "DB-check": {
+                    "data": {},
+                    "duration": "00:00:00.8160581",
+                    "status": "Healthy",
+                    "tags": [
+                        "db"
+                    ]
+                }
+            }]
+        }
+    },
+    "examples": [{
+        "status": "Healthy",
+        "totalDuration": "00:00:00.8185514",
+        "entries": {
+            "self": {
+                "data": {},
+                "duration": "00:00:00.0000022",
+                "status": "Healthy",
+                "tags": []
+            },
+            "rabbitmq": {
+                "data": {},
+                "duration": "00:00:00.8182562",
+                "status": "Healthy",
+                "tags": [
+                    "msgbus"
+                ]
+            },
+            "DB-check": {
+                "data": {},
+                "duration": "00:00:00.8160581",
+                "status": "Healthy",
+                "tags": [
+                    "db"
+                ]
+            }
+        }
+    }]
+}

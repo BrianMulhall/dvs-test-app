@@ -1,0 +1,61 @@
+bless( {
+  "content" => bless( {
+    "asset" => bless( {
+      "content" => "{\"backOrSecondImageBase64\":\"\\/9j\\/4AAQSkZJRgABAQAAAQABAAD\\/4gIoSUNDX1BST0ZJTEUAAQEAAAIYAAAAAAQwAABtbnRyUkdCIFhZWiAAAAAAAAAAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAAHRyWFlaAAABZAAAABRnWFlaAAABeAAAABRiWFlaAAABjAAAABRyVFJDAAABoAAAAChnVFJDAAABoAAAAChiVFJDAAABoAAAACh3dHB0AAAByAAAABRjcHJ0AAAB3AAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAFgAAAAcAHMAUgBHAEIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFhZWiAAAAAAAABvogAAOPUAAAOQWFlaIAAAAAAAAGKZAAC3hQAAGNpYWVogAAAAAAAAJKAAAA+EAAC2z3BhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAAo=\",\"documentType\":1,\"faceImageBase64\":null,\"frontImageBase64\":\"\\/9j\\/4AAQSkZJRgABAQAAAQABAAD\\/4gIoSUNDX1BST0ZJTEUAAQEAAAIYAAAAAAQwAABtbnRyUkdCIFhZWiAAAAAAAAAAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAAHRyWFlaAAABZAAAABRnWFlaAAABeAAAABRiWFlaAAABjAAAABRyVFJDAAABoAAAAChnVFJDAAABoAAAAChiVFJDAAABoAAAACh3dHB0AAAByAAAABRjcHJ0AAAB3AAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAFgAAAAcAHMAUgBHAEIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFhZWiAAAAAAAABvogAAOPUAAAOQWFlaIAAAAAAAAGKZAAC3hQAAGNpYWVogAAAAAAAAJKAAAA+EAAC2z3BhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAAo=\",\"metadata\":{\"captureMethod\":\"111\",\"frontEndMetadata\":\"\",\"otherMetadata\":\"\",\"userAgent\":\"\"},\"overriddenSettings\":{\"isAddressCheckEnabled\":true,\"isAgeCheckEnabled\":true,\"isBackOrSecondImageProcessing\":true,\"isDMVEnabled\":false,\"isDMVPartialEnabled\":false,\"isDmvAndIdentiFraudEnabled\":false,\"isDmvAndIdentiFraudPartialEnabled\":false,\"isDmvOrIdentiFraudEnabled\":false,\"isDmvOrIdentiFraudPartialEnabled\":false,\"isFaceMatchEnabled\":false,\"isFaceRequiredOnDocument\":true,\"isGenderCheckEnabled\":true,\"isIdentiFraudEnabled\":false,\"isIdentiFraudFullCaseEnabled\":false,\"isOCREnabled\":false,\"isShuftiEnabled\":true},\"ssn\":\"5308\",\"trackString\":{\"barcodeParams\":null,\"trackString\":\"QAoeDUFOU0kgNjM2MDAzMDgwMDAyREwwMDQxMDI1NVpNMDI5NjAwMDhETERBUUctNDIwLTEzNS00MjktMjk4CkRDU0dMT1dBQ0sKRERFTgpEQUNEQU5JRUwKRERGTgpEQURKT0hOCkRER04KRENBQ00KRENCTk9ORQpEQ0ROT05FCkRCRDA0MTUyMDE3CkRCQjA0MTcxOTkxCkRCQTA0MTcyMDI0CkRCQzEKREFVMDczIGluCkRBWVVOSwpEQUcxMDUgT0FLSFVSU1QgQVZFCkRBSUVTU0VYCkRBSk1ECkRBSzIxMjIxMDAwMCAgCkRDRjI1MDBGQUQ5OQpEQ0dVU0EKRENLMTAwMDg5MzEwMApEREFGCkREQjA2MjAyMDE2CkRBVzE5Nw1aTVpNQTAxDQ==\"}}",
+      "start_range" => 0
+    }, 'Mojo::Asset::Memory' ),
+    "body_size" => 2472,
+    "events" => {
+      "read" => [
+        sub { "DUMMY" }
+      ]
+    },
+    "header_buffer" => "Accept: */*\r\nAccept-Encoding: gzip\r\nAuthorization: Bearer sk_edbe2987-eb2c-4c20-843b-e663d583c7a3\r\nContent-Length: 2472\r\nContent-Type: application/json\r\nHost: stage.dvs2.idware.net\r\nUser-Agent: Mojolicious (Perl)\r\n\r\n",
+    "headers" => bless( {
+      "headers" => {
+        "accept" => [
+          "*/*"
+        ],
+        "accept-encoding" => [
+          "gzip"
+        ],
+        "authorization" => [
+          "Bearer sk_edbe2987-eb2c-4c20-843b-e663d583c7a3"
+        ],
+        "content-length" => [
+          2472
+        ],
+        "content-type" => [
+          "application/json"
+        ],
+        "host" => [
+          "stage.dvs2.idware.net"
+        ],
+        "user-agent" => [
+          "Mojolicious (Perl)"
+        ]
+      }
+    }, 'Mojo::Headers' ),
+    "read" => $VAR1->{"content"}{"events"}{"read"}[0]
+  }, 'Mojo::Content::Single' ),
+  "events" => {},
+  "finished" => 1,
+  "fix" => 1,
+  "method" => "POST",
+  "start_buffer" => "POST /api/v4/Verify HTTP/1.1\r\n",
+  "state" => "finished",
+  "url" => bless( {
+    "host" => "stage.dvs2.idware.net",
+    "path" => bless( {
+      "charset" => "UTF-8",
+      "path" => "/api/v4/Verify"
+    }, 'Mojo::Path' ),
+    "query" => bless( {
+      "charset" => "UTF-8",
+      "pairs" => []
+    }, 'Mojo::Parameters' ),
+    "scheme" => "https"
+  }, 'Mojo::URL' ),
+  "version" => "1.1",
+  "via_proxy" => 1
+}, 'Mojo::Message::Request' )
